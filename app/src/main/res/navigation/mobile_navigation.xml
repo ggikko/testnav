@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/mobile_navigation"
+            app:startDestination="@id/goodsFragment">
+
+    <fragment android:id="@+id/goodsFragment" android:name="world.hello.helloapplication.goods.GoodsFragment"
+              android:label="fragment_goods" tools:layout="@layout/fragment_goods">
+        <action android:id="@+id/action_goodsFragment_to_goodDetailFragment" app:destination="@id/goodDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/moreFragment" android:name="world.hello.helloapplication.more.MoreFragment"
+              android:label="fragment_more" tools:layout="@layout/fragment_more"/>
+
+    <fragment android:id="@+id/storeFragment" android:name="world.hello.helloapplication.stores.StoreFragment"
+              android:label="fragment_store" tools:layout="@layout/fragment_store">
+        <action android:id="@+id/action_storeFragment_to_storeDetailFragment"
+                app:destination="@id/storeDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/goodDetailFragment" android:name="world.hello.helloapplication.goods.GoodDetailFragment"
+              android:label="fragment_good_detail" tools:layout="@layout/fragment_good_detail">
+        <action android:id="@+id/action_goodDetailFragment_to_webFragment" app:destination="@id/webFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/storeDetailFragment"
+              android:name="world.hello.helloapplication.stores.StoreDetailFragment"
+              android:label="fragment_store_detail" tools:layout="@layout/fragment_store_detail">
+        <action android:id="@+id/action_storeDetailFragment_to_webFragment" app:destination="@id/webFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/likeFragment" android:name="world.hello.helloapplication.like.LikeFragment"
+              android:label="fragment_like" tools:layout="@layout/fragment_like">
+        <action android:id="@+id/action_likeFragment_to_webFragment" app:destination="@id/webFragment"/>
+    </fragment>
+    <fragment android:id="@+id/webFragment" android:name="world.hello.helloapplication.web.WebFragment"
+              android:label="fragment_web" tools:layout="@layout/fragment_web"/>
+</navigation>
